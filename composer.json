@@ -1,0 +1,21 @@
+{
+    "name": "tolgatasci/wp-api-php",
+    "description": "Whatsapp unofficial api for php.",
+    "type": "library",
+    "license": "mit",
+    "authors": [
+        {
+            "name": "Tolga Tasci",
+            "email": "tolgatasci@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.4"
+    },
+    "autoload": {
+        "psr-0": {
+            "WpApi": "src/"
+        }
+    }
+}
