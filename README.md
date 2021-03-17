@@ -3,7 +3,7 @@ Whatsapp unofficial api for PHP. Very EASY and very FAST.
 
 First one register and get device https://whatsapp.securedatainfo.com/
 
-composer require tolgatasci/wp-api-php
+    composer require tolgatasci/wp-api-php
 
 Example 
 
