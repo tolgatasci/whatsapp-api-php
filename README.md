@@ -1,10 +1,14 @@
 # Whatsapp Api Php
- Whatsapp unofficial api for PHP. Very EASY and very FAST.
+Whatsapp unofficial api for PHP. Very EASY and very FAST.
+
+First one register and get device https://whatsapp.securedatainfo.com/
+
+composer require tolgatasci/wp-api-php
 
 Example 
 
     <?php
-    require_once __DIR__ . '/../../vendor/autoload.php';
+    require_once __DIR__ . '/vendor/autoload.php';
     use WpApi\Api;
     
     $api = new Api(TOKEN);
