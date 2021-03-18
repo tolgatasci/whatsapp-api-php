@@ -127,14 +127,25 @@ class Api
         $file = $fields['file'];
         unset($fields['file']);
         $delimiter = '-------------' . $boundary;
-
         foreach ($fields as $name => $content) {
             if(is_array($content)){
-                foreach($content as $veriable):
-                    $data .= "--" . $delimiter . $eol
-                        . 'Content-Disposition: form-data; name="' . $name . "[]\"".$eol.$eol
-                        . $veriable . $eol;
+                foreach($content as $index => $veriable):
+                    if(is_array($veriable)){
+
+                        foreach($veriable as $key => $son):
+
+                            $data .= "--" . $delimiter . $eol
+                                . 'Content-Disposition: form-data; name="' . $name . "[$index][$key]\"".$eol.$eol
+                                . $son . $eol;
+                        endforeach;
+                    }else{
+                        $data .= "--" . $delimiter . $eol
+                            . 'Content-Disposition: form-data; name="' . $name . "[]\"".$eol.$eol
+                            . $veriable . $eol;
+                    }
+
                 endforeach;
+
             }else{
                 $data .= "--" . $delimiter . $eol
                     . 'Content-Disposition: form-data; name="' . $name . "\"".$eol.$eol

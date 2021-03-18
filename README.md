@@ -45,9 +45,9 @@ Example
     */
     /*
     $opt = [
-        'message_body'=> "tester",
-        'phone_numbers'=>["+905467751802"],
-        'file'=> dirname(__FILE__).'\test.jpg'
+    'message_body'=> "tester",
+    'phone_numbers'=>[["phone"=>"+905467751802","message"=>"diffrent message"]],
+    'file'=> dirname(__FILE__).'\test.jpg'
     ];
     $send_message = $api->send_message($opt);
     print_r(json_decode($send_message));
